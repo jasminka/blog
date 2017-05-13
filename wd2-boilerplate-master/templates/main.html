@@ -7,4 +7,23 @@
     <h1>Ninja Tech Forum</h1>
     <p>Welcome to Ninja Tech Forum. Coming soon.</p>
 </div>
-{%endblock vsebina %}
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table">
+            <thead>
+                <tr>
+                   <th>Topic</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for topic in topics %}
+                    <tr>
+                        <td><a href="/topic/{{ topic.key.id() }}">{{ topic.title }}</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br>
+    </div>
+</div>
+{% endblock vsebina %}

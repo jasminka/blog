@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Adding a topic{% endblock title %}
+
+{% block vsebina %}
+    <div class="panel panel-default">
+        <div class="panel-heading">{{ topic.title }}<br>{{ topic.author_email }}</div>
+        <div class="panel-body">{{ topic.content }}</div>
+    </div>
+{% endblock %}
